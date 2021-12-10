@@ -17,4 +17,5 @@ def detail(request, hero_id):
     }
     return render(request, 'superheros/detail.html', context)
 
-
+def create(request):
+    pass
