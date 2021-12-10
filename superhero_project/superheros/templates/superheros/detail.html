@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Superhero Details</title>
 </head>
+
 <body>
 
     <div class="jumbotron text-center">
         <h1 class="display-all">{{ single_hero.name }}</h1>
             <p class="lead">Alter Ego: {{ single_hero.alter_ego}}</p>
-            <p class="lead">Primary Ability: {{ single_hero.primary}}</p>
-            <p class="lead">Secondary Ability: {{ single_hero.secondary}}</p>
-            <p class="lead">Catchphrase: {{ single_hero.catchphrase}}</p>
+            <p class="lead">Primary Ability: {{ single_hero.primary_ability}}</p>
+            <p class="lead">Secondary Ability: {{ single_hero.secondary_ability}}</p>
+            <p class="lead">Catchphrase: {{ single_hero.catch_phrase}}</p>
         <hr class="all">
-        <form action="{% url 'superheros:index'%}" method="get">
+        <form action="{% url 'superheros:index' %}" method="get">
             <button type="submit" class="btn btn-success btn-lg">Back to Main</button>
         </form>
     </div>
