@@ -16,3 +16,5 @@ def detail(request, hero_id):
         'single_hero': single_hero
     }
     return render(request, 'superheros/detail.html', context)
+
+
