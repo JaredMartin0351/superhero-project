@@ -5,4 +5,7 @@ from django.http import HttpResponse
 # Create your views here.
 def index(request):
     all_heros = Superhero.objects.all()
-    return render(request, 'superheros/index.html')
+    context = {
+        'all_heros': all_heros
+    }
+    return render(request, 'superheros/index.html', context)
