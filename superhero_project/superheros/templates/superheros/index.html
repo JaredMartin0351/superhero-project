@@ -15,7 +15,8 @@
     </ul>
     <a href="{% url 'superheros:create' %}">Add New Hero</a> 
 
-    <img src="images/wbhulk.jpg" alt="World Breaker Hulk">
+    {% load static %}
+    <img src="{% static 'wbhulk.jpg' %}" alt="World Breaker Hulk">
     
 </body>
 </html>
