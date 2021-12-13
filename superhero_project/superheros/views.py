@@ -1,4 +1,4 @@
-from .models import Superhero
+from .models import Superhero#, #Form
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
@@ -31,17 +31,19 @@ def create(request):
     else:
         return render(request, 'superheros/create.html')
     
-def edit(request, hero_id):
-    hero_edit = Superhero.objects.get(pk=hero_id)
-    context = {
-        'hero_edit': hero_edit
-    }
-    return render(request, 'superheros/index.html', context)
+#def edit(request, hero_id):
+#    hero_edit = Superhero.objects.get(pk=hero_id)
+#    form = Form(request.POST or None)
+#    context = {
+#        'hero_edit': hero_edit,
+#        'form': form
+#    }
+#    return render(request, 'superheros/edit.html', context)
 
 def delete(request, hero_id):
     hero_delete = Superhero.objects.get(pk=hero_id)
     hero_delete.delete()
-    return render(request, 'superheros/index.html')
+    return redirect(request, 'superheros/index.html')
 
     
     
